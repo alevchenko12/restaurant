@@ -30,16 +30,16 @@ jobs:
       run: echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> $GITHUB_ENV
   
     - name: Run tests for menu
-      run: python restaurant/manage.py test menu
+      run: python manage.py test menu
 
     - name: Run tests for reservations
-      run: python restaurant/manage.py test reservations
+      run: python manage.py test reservations
 
     - name: Run tests for users
-      run: python restaurant/manage.py test users.tests
+      run: python manage.py test users.tests
 
     - name: Run tests for shopping_cart
-      run: python restaurant/manage.py test shopping_cart.tests
+      run: python manage.py test shopping_cart.tests
 
 
   deploy:
